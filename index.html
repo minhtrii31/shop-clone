@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/main.css">
+	<script src="./assets/js/main.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+</head>
+<body>
+	<div class="app">
+		<header class="header">
+			<div class="grid">
+				<nav class="header__navbar">
+					<ul class="header__navbar-list">
+						<li class="header__navbar-item">
+							<a href="" class="header__navbar-item-link">Đăng nhập trên điện thoại</a>
+						</li>
+						<li class="header__navbar-item">
+							<span class="header__navbar-title--no-pointer">Kết nối</span>
+							<a href="" class="header__navbar-icon-link">
+								<i class="header__navbar-icon ti-facebook"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="header__navbar-list">
+						<li class="header__navbar-item header__navbar-item-has-notify">
+							<a href="" class="header__navbar-item-link">
+								<i class="ti-bell"></i>
+								<span class="header__navbar-item-link-title">Thông báo</span>
+							</a>
+						</li>
+						<li class="header__navbar-item">
+							<a href="" class="header__navbar-item-link">
+								<i class="ti-help-alt"></i>
+								<span class="header__navbar-item-link-title">Trợ giúp</span>
+							</a>
+						</li>
+						<li class="header__navbar-item header__navbar-item--strong" onclick="register_form()">Đăng ký</li>
+						<li class="header__navbar-item header__navbar-item--strong" onclick="login_form()">Đăng nhập</li>
+						<!-- <li class="header__navbar-item header__navbar-user">
+							<img src="./assets/images/user_logo.png" alt="user logo" class="header__navbar-user-img">
+							<span class="header__navbar-user-name">minhtri3101200@gmail.com</span>
+
+							<ul class="header__navbar-user-menu">
+								<li class="header__navbar-user-item">
+									<a href="">Tài khoản</a>
+								</li>
+								<li class="header__navbar-user-item">
+									<a href="">Địa chỉ</a>
+								</li>
+								<li class="header__navbar-user-item">
+									<a href="">Đơn mua</a>
+								</li>
+								<li class="header__navbar-user-item header__navbar-user-item-separate">
+									<a href="">Đăng xuất</a>
+								</li>
+							</ul>
+						</li> -->
+					</ul>
+				</nav>
+				<!-- Header with search -->
+				<div class="header-with-search">
+					<div class="header__logo">
+						<a href="/" class="header__logo-link">
+							<img src="./assets/images/logo.png" alt="logo goodbuy" class="header__logo-img">
+						</a>
+					</div>
+
+					<div class="header__search">
+						<div class="header__search-input-wrap">
+							<input type="text" class="header__search-input" placeholder="Nhập sản phẩm cần tìm">
+							<!-- Search history -->
+							<div class="header__search-history">
+								<h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+								<ul class="header__search-history-list">
+									<li class="header__search-history-item">
+										<a href="">Thực phẩm thiết yếu</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+									<li class="header__search-history-item">
+										<a href="">Rau củ quả</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+									<li class="header__search-history-item">
+										<a href="">Quần áo</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button class="header__search-btn">
+							<i class="header__search-btn-icon ti-search"></i>
+							<span class="header__search-btn-icon-title">Tìm kiếm</span>
+						</button>
+					</div>
+
+					<!-- Cart -->
+					<div class="header__cart">
+						<div class="header__cart-wrap">
+							<i class="header__cart-icon ti-shopping-cart"></i>
+							<span class="header__cart-notice">1</span>
+							<!-- Has no cart: header__cart-list--no-cart -->
+							<div class="header__cart-list">
+								<img src="./assets/images/nocart.png" alt="no cart" class="header__cart-no-card-img">
+								<span class="header__cart-list-no-cart-msg">Giỏ hàng trống</span>
+								<span>
+									<h4 class="header__cart-heading">Sản phẩm đã thêm vào giỏ</h4>
+									<ul class="header__cart-list-item">
+										<li class="header__cart-item">
+											<img src="./assets/images/razer_blade_14_amd.jpg" alt="" class="header__cart-img">
+											<div class="header__cart-item-info">
+												<div class="header__cart-item-head">
+													<h5 class="header__cart-item-name">Razer Blade 14 AMD</h5>
+													<div class="header__cart-item-price-wrap">
+														<span class="header__cart-item-price">51,990,000đ</span>
+														<span class="header__cart-item-multiply">x</span>
+														<span class="header__cart-item-quantity">1</span>
+													</div>
+												</div>
+												<div class="header__cart-item-body">
+													<span class="header__cart-item-description">Phân loại: Laptop</span>
+													<span class="header__cart-item-remove">Xoá</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a href="#">
+								</span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</header>
+		<div class="container">
+			<div class="grid">
+				<!-- Navigation -->
+				<div class="grid__row">
+					<nav class="nav_bar">
+						<div class="nav_bar_next">
+							<span id="nav-next-to" class="icon ti-angle-right"></span>
+						</div>
+						<div class="nav_bar-link">
+							<a class="nav_bar-link-item" href="">Thực phẩm thiết yếu</a>
+							<a class="nav_bar-link-item" href="">Rau củ quả</a>
+							<a class="nav_bar-link-item" href="">Bách hóa</a>
+							<a class="nav_bar-link-item" href="">Nhà cửa</a>
+							<a class="nav_bar-link-item" href="">Thiết bị số</a>
+							<a class="nav_bar-link-item" href="">Điện thoại</a>
+							<a class="nav_bar-link-item" href="">Gia dụng</a>
+							<a class="nav_bar-link-item" href="">Thời gian nam</a>
+							<a class="nav_bar-link-item" href="">Thời trang nữ</a>
+							<a class="nav_bar-link-item" href="">Giày nam</a>
+							<a class="nav_bar-link-item" href="">Giày nữ</a>
+							<a class="nav_bar-link-item" href="">Túi nữ</a>
+							<!-- <a class="nav_bar-link-item" href="">Giày nam</a>
+							<a class="nav_bar-link-item" href="">Giày nữ</a>
+							<a class="nav_bar-link-item" href="">Túi nam</a>
+							<a class="nav_bar-link-item" href="">Balo & Vali</a>
+							<a class="nav_bar-link-item" href="">Phụ kiện</a>
+							<a class="nav_bar-link-item" href="">Đồng hồ</a>
+							<a class="nav_bar-link-item" href="">Laptop</a>
+							<a class="nav_bar-link-item" href="">Quốc tế</a>
+							<a class="nav_bar-link-item" href="">Voucher</a>
+							<a class="nav_bar-link-item" href="">Xe</a>
+							<a class="nav_bar-link-item" href="">Sách</a>
+							<a class="nav_bar-link-item" href="">Điện tử</a>
+							<a class="nav_bar-link-item" href="">Thể thao</a>
+							<a class="nav_bar-link-item" href="">Máy ảnh</a> -->
+						</div>
+					</nav>
+				</div>
+				<div class="news-slider">
+					<div class="grid__row">
+						<div class="grid__column-8">
+							<div id="slider" class="slider">
+								<a href="#" class="control_prev ti-angle-left" onclick="switchImage()"></a>
+								<a href="#" class="control_next ti-angle-right" onclick="switchImage()"></a>
+								<a href="">
+									<img src="./assets/images/news_1.png" class="slider-img" name="myimage">
+								</a>
+							</div>
+						</div>
+						<div class="grid__column-4">
+							<a href="">
+								<img src="./assets/images/new_sale.jpg" class="slider-news-sale">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer">
+
+		</footer>
+
+		<!-- Modal  -->
+		<div id="overlay" class="modal">
+			<div class="modal__overlay">
+
+			</div>
+
+			<div class="modal__body">
+				<!-- Register form -->
+				<div id="register" class="auth-form">
+					<div class="auth-form__container">
+						<div class="auth-form__header">
+							<div class="auth-form__heading">Đăng ký</div>
+							<span class="auth-form__switch-btn" onclick="back_from_form_register(); login_form()">Đăng nhập</span>
+						</div>
+
+						<div class="auth-form__form"> 
+							<div class="auth-form__group">
+								<input type="text" class="auth-form__input" placeholder="Nhập địa chỉ email">
+							</div>
+							<div class="auth-form__group">
+								<input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+							</div>
+							<div class="auth-form__group">
+								<input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+							</div>
+						</div>
+						<div class="auth-form__aside">
+							<p class="auth-form__policy-text">Bằng việc đăng ký, bạn sẽ đồng ý với chúng tôi về
+								<a href="" class="auth-form__text-link">Điều khoản dịch vụ</a>
+								và
+								<a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+							</p>
+						</div>
+						<div class="author-form__controls">
+							<button class="btn btn--normal author-form__controls-back" onclick="back_from_form_register()">TRỞ LẠI</button>
+							<button class="btn btn--primary">ĐĂNG KÝ</button>
+						</div>
+					</div>
+					<div class="author-form__socials">
+						<a href="" class="author-form__socials--facebook btn btn--size-s btn--with--icon">
+							<i class="author-form__socials-icon ti-facebook"></i>
+							<span class="author-form__socials-title">Kết nối với Facebook</span>
+						</a>
+						<a href="" class="author-form__socials--google btn btn--size-s btn--with--icon">
+							<i class="author-form__socials-icon ti-google"></i>
+							<span class="author-form__socials-title">Kết nối với Google</span>
+						</a>
+					</div>
+				</div>
+
+				<!-- Login form -->
+				<div id="login" class="auth-form">
+					<div class="auth-form__container">
+						<div class="auth-form__header">
+							<div class="auth-form__heading">Đăng nhập</div>
+							<span class="auth-form__switch-btn" onclick="back_from_form_login(); register_form()">Đăng ký</span>
+						</div>
+
+						<div class="auth-form__form"> 
+							<div class="auth-form__group">
+								<input type="text" class="auth-form__input" placeholder="Email/Số điện thoại">
+							</div>
+							<div class="auth-form__group">
+								<input type="password" class="auth-form__input" placeholder="Mật khẩu">
+							</div>
+							<div class="auth-form-remember">
+								<input type="checkbox" name="remember" id="remember-me"> 
+								<span class="auth-form-remember-title">Tự động đăng nhập</span>
+							</div>
+						</div>
+						<div class="auth-form__aside">
+							<div class="auth-form__help">
+								<a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
+								<span class="auth-form__help-separate"></span>
+								<a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+							</div>
+						</div>
+						<div class="author-form__controls">
+							<button class="btn btn--normal author-form__controls-back" onclick="back_from_form_login()">TRỞ LẠI</button>
+							<button class="btn btn--primary">ĐĂNG NHẬP</button>
+						</div>
+					</div>
+					<div class="author-form__socials">
+						<a href="" class="author-form__socials--facebook btn btn--size-s btn--with--icon">
+							<i class="author-form__socials-icon fab ti-facebook"></i>
+							<span class="author-form__socials-title">Facebook</span>
+						</a>
+						<a href="" class="author-form__socials--google btn btn--size-s btn--with--icon">
+							<i class="author-form__socials-icon ti-google"></i>
+							<span class="author-form__socials-title">Google</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
