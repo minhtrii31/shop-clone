@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick.css">
 </head>
 <body>
-	<div class="app">
+	<div class="app" style="background-color: #F4F4F4;">
 		<header class="header">
 			<div class="grid">
 				<nav class="header__navbar">
@@ -147,120 +147,256 @@
 					</div>
 			</div>
 		</header>
-		<div class="container">
+		<div class="navigation" style="background-color: white;">
 			<div class="grid">
 				<!-- Navigation -->
 				<nav class="nav_bar">
 					<div class="arrow_prev">
 						<span>
-							<i class="ti-angle-left"></i>
+							<i id="prev_hide" class="ti-angle-left" onclick="show_next_arrow()"></i>
 						</span>
 					</div>
-					<div class="grid__row nav_bar-link">
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Thực phẩm thiết yếu</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Rau củ quả</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Bách hóa</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Nhà cửa</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Thiết bị số</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Điện thoại</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Gia dụng</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Thời gian nam</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Thời trang nữ</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Giày nam</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Giày nữ</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Túi nữ</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Giày nam</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Giày nữ</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Túi nam</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Balo & Vali</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Phụ kiện</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Đồng hồ</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Laptop</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Quốc tế</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Voucher</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Xe</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Sách</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Điện tử</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Thể thao</a>
-						</div>
-						<div class="grid__column-12">
-							<a class="nav_bar-link-item" href="">Máy ảnh</a>
-						</div>
+					<div class="nav_bar-nav">
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thịt, rau củ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Nhà cửa</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thiết bị số</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Điện thoại</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Gia dụng</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thời gian nữ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thời trang nam</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Giày nữ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Giày nam</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Giày nữ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Laptop</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Phụ kiện</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Đồng hồ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Balo & Vali</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Quốc tế</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Voucher</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Sách</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Điện tử</div>
+						</a>
 					</div>
 					<div class="arrow_next">
+						<span>
+							<i id="next_hide" class="ti-angle-right" onclick=" show_prev_arrow() "></i>
+						</span>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="news-slider">
+			<div class="grid">
+				<div class="grid__row">
+					<div class="grid__column-8">
+						<div id="slider" class="slider">
+							<a href="#" class="control_prev ti-angle-left" onclick="switchImage()"></a>
+							<a href="#" class="control_next ti-angle-right" onclick="switchImage()"></a>
+							<a href="">
+								<img src="./assets/images/news_1.png" class="slider-img" name="myimage">
+							</a>
+						</div>
+					</div>
+					<div class="grid__column-4">
+						<a href="">
+							<img src="./assets/images/new_sale.jpg" class="slider-news-sale">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid">
+			<div class="sale__item">
+				<div class="sale__item-header">
+					<div class="sale__item-heading">
+						<img src="./assets/images/giasoc.svg" class="sale__item-img">
+						<img src="./assets/images/homnay.svg" class="sale__item-img">
+					</div>
+					<div class="sale__item-count-down">
+						<span>3 : 2 : 1 </span>
 						<span>
 							<i class="ti-angle-right"></i>
 						</span>
 					</div>
-				</nav>
-				<div class="news-slider">
-					<div class="grid__row">
-						<div class="grid__column-8">
-							<div id="slider" class="slider">
-								<a href="#" class="control_prev ti-angle-left" onclick="switchImage()"></a>
-								<a href="#" class="control_next ti-angle-right" onclick="switchImage()"></a>
-								<a href="">
-									<img src="./assets/images/news_1.png" class="slider-img" name="myimage">
+				</div>
+				<div class="hot__deal">
+					<div class="grid__row hot__deal-slider">
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/may_danh_trung.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price sale-price">
+											221.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<span class="sale__item-link-info-discount">
+											-4%
+										</span>
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
 								</a>
 							</div>
 						</div>
-						<div class="grid__column-4">
-							<a href="">
-								<img src="./assets/images/new_sale.jpg" class="slider-news-sale">
-							</a>
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/tu_lanh.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price sale-price">
+											10.339.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<span class="sale__item-link-info-discount">
+											-13%
+										</span>
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/may_chay_bo.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price sale-price">
+											3.581.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<span class="sale__item-link-info-discount">
+											-37%
+										</span>
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/can_dien_tu.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price sale-price">
+											185.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<span class="sale__item-link-info-discount">
+											-66%
+										</span>
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/may_lanh.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price">
+											5.879.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<!-- <span class="sale__item-link-info-discount">
+											
+										</span> -->
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="grid__column-2">
+							<div class="hot__deal-item">
+								<a href="#" class="sale__item-link">
+									<div class="sale__item-link-thumbnail">
+										<img src="./assets/images/tv_coocaa_42.webp" class="sale__item-link-thumbnail-img">
+									</div>
+									<div class="sale__item-link-info">
+										<span class="sale__item-link-info-price sale-price">
+											5.299.000
+											<span class="currency sale-price">đ</span>
+										</span>
+										<span class="sale__item-link-info-discount">
+											-10%
+										</span>
+									</div>
+									<div class="sale__item-link-process">
+										<span class="sale__item-link-process-remain">
+											Đã bán 6
+										</span>
+									</div>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+		</div>
 		</div>
 		<footer class="footer">
 

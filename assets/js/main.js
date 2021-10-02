@@ -18,23 +18,38 @@ function back_from_form_login() {
 }
 // Slider news change image
 window.onload = function(){
-        setTimeout("switchImage()", 5000)
+        setTimeout("switchImage()", 500)
       }
       var IMGcurrent = 1
       var numIMG = 2
       function switchImage(){
         IMGcurrent++
         document.images['myimage'].src ='./assets/images/news_' + IMGcurrent + '.png'
-        if(IMGcurrent == numIMG){IMGcurrent =0}
+        if(IMGcurrent == numIMG){IMGcurrent = 0}
+	setTimeout("switchImage()", 500)
 }
 $(function() {
-	$('.nav_bar-link').slick({
-		slidesToShow:6,
-		slidesToScroll:6,
+	$('.nav_bar-nav').slick({
+		slidesToShow:11,
+		slidesToScroll:11,
 		arrows:true,
-		prevArrow:'.arrow_prev',
-		nextArrow:'.arrow_next',
+		prevArrow:'.nav_bar .arrow_prev',
+		nextArrow:'.nav_bar .arrow_next',
 		responsive: [
+			{
+				breakpoint: 1300,
+				settings: {
+				  slidesToShow: 8,
+				  slidesToScroll: 8,
+				}
+			},
+			{
+				breakpoint: 1150,
+				settings: {
+				  slidesToShow: 6,
+				  slidesToScroll: 6,
+				}
+			},
 			{
 			  breakpoint: 1024,
 			  settings: {
@@ -66,3 +81,12 @@ $(function() {
 		      ]
 	}) 
 })
+
+function show_prev_arrow() {
+	document.getElementById("prev_hide").style.display = "block";
+	document.getElementById("next_hide").style.display = "none";
+}
+function show_next_arrow() {
+	document.getElementById("prev_hide").style.display = "none";
+	document.getElementById("next_hide").style.display = "block";
+}
