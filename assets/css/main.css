@@ -490,11 +490,9 @@
         display: block;
 }
 .nav_bar {
+        position: relative;
         background-color: var(--white-color);
         height: 44px;
-}
-.nav_bar-link {
-        overflow: hidden;
 }
 .nav_bar-link-item {
         display: inline-flex;

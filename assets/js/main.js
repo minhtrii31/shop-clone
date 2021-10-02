@@ -30,7 +30,7 @@ window.onload = function(){
 $(function() {
 	$('.nav_bar-link').slick({
 		slidesToShow:6,
-		slidesToScroll:4,
+		slidesToScroll:6,
 		arrows:true,
 		prevArrow:'.arrow_prev',
 		nextArrow:'.arrow_next',
@@ -39,21 +39,21 @@ $(function() {
 			  breakpoint: 1024,
 			  settings: {
 			    slidesToShow: 4,
-			    slidesToScroll: 3,
+			    slidesToScroll: 4,
 			  }
 			},
 			{
 			  breakpoint: 800,
 			  settings: {
 			    slidesToShow: 3,
-			    slidesToScroll: 2
+			    slidesToScroll: 3
 			  }
 			},
 			{
 			  breakpoint: 600,
 			  settings: {
 			    slidesToShow: 2,
-			    slidesToScroll: 1
+			    slidesToScroll: 2
 			  }
 			},
 			{
