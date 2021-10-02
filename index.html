@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/main.css">
-	<script src="./assets/js/main.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
+	<!-- Slick -->
+	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick-theme.css">
+	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick.css">
 </head>
 <body>
 	<div class="app">
@@ -148,41 +150,98 @@
 		<div class="container">
 			<div class="grid">
 				<!-- Navigation -->
-				<div class="grid__row">
-					<nav class="nav_bar">
-						<div class="nav_bar_next">
-							<span id="nav-next-to" class="icon ti-angle-right"></span>
-						</div>
-						<div class="nav_bar-link">
+				<nav class="nav_bar">
+					<div class="arrow_prev">
+						<span>
+							<i class="ti-angle-left"></i>
+						</span>
+					</div>
+					<div class="arrow_next">
+						<span>
+							<i class="ti-angle-right"></i>
+						</span>
+					</div>
+					<div class="grid__row nav_bar-link">
+						<div class="grid__column-12">
 							<a class="nav_bar-link-item" href="">Thực phẩm thiết yếu</a>
-							<a class="nav_bar-link-item" href="">Rau củ quả</a>
-							<a class="nav_bar-link-item" href="">Bách hóa</a>
-							<a class="nav_bar-link-item" href="">Nhà cửa</a>
-							<a class="nav_bar-link-item" href="">Thiết bị số</a>
-							<a class="nav_bar-link-item" href="">Điện thoại</a>
-							<a class="nav_bar-link-item" href="">Gia dụng</a>
-							<a class="nav_bar-link-item" href="">Thời gian nam</a>
-							<a class="nav_bar-link-item" href="">Thời trang nữ</a>
-							<a class="nav_bar-link-item" href="">Giày nam</a>
-							<a class="nav_bar-link-item" href="">Giày nữ</a>
-							<a class="nav_bar-link-item" href="">Túi nữ</a>
-							<!-- <a class="nav_bar-link-item" href="">Giày nam</a>
-							<a class="nav_bar-link-item" href="">Giày nữ</a>
-							<a class="nav_bar-link-item" href="">Túi nam</a>
-							<a class="nav_bar-link-item" href="">Balo & Vali</a>
-							<a class="nav_bar-link-item" href="">Phụ kiện</a>
-							<a class="nav_bar-link-item" href="">Đồng hồ</a>
-							<a class="nav_bar-link-item" href="">Laptop</a>
-							<a class="nav_bar-link-item" href="">Quốc tế</a>
-							<a class="nav_bar-link-item" href="">Voucher</a>
-							<a class="nav_bar-link-item" href="">Xe</a>
-							<a class="nav_bar-link-item" href="">Sách</a>
-							<a class="nav_bar-link-item" href="">Điện tử</a>
-							<a class="nav_bar-link-item" href="">Thể thao</a>
-							<a class="nav_bar-link-item" href="">Máy ảnh</a> -->
 						</div>
-					</nav>
-				</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Rau củ quả</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Bách hóa</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Nhà cửa</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Thiết bị số</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Điện thoại</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Gia dụng</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Thời gian nam</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Thời trang nữ</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Giày nam</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Giày nữ</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Túi nữ</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Giày nam</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Giày nữ</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Túi nam</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Balo & Vali</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Phụ kiện</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Đồng hồ</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Laptop</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Quốc tế</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Voucher</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Xe</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Sách</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Điện tử</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Thể thao</a>
+						</div>
+						<div class="grid__column-12">
+							<a class="nav_bar-link-item" href="">Máy ảnh</a>
+						</div>
+					</div>
+				</nav>
 				<div class="news-slider">
 					<div class="grid__row">
 						<div class="grid__column-8">
@@ -303,5 +362,8 @@
 			</div>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="./assets/js/main.js"></script>
+	<script src="./assets/css/slick-master/slick/slick.min.js"></script>
 </body>
 </html>

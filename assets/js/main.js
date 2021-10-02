@@ -27,3 +27,42 @@ window.onload = function(){
         document.images['myimage'].src ='./assets/images/news_' + IMGcurrent + '.png'
         if(IMGcurrent == numIMG){IMGcurrent =0}
 }
+$(function() {
+	$('.nav_bar-link').slick({
+		slidesToShow:6,
+		slidesToScroll:4,
+		arrows:true,
+		prevArrow:'.arrow_prev',
+		nextArrow:'.arrow_next',
+		responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+			    slidesToShow: 4,
+			    slidesToScroll: 3,
+			  }
+			},
+			{
+			  breakpoint: 800,
+			  settings: {
+			    slidesToShow: 3,
+			    slidesToScroll: 2
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+			    slidesToShow: 2,
+			    slidesToScroll: 1
+			  }
+			},
+			{
+				breakpoint: 500,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1
+				}
+			}
+		      ]
+	}) 
+})
