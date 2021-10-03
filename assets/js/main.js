@@ -1,3 +1,4 @@
+
 function register_form() {
 	document.getElementById("overlay").style.display = "block";
 	document.getElementById("register").style.display = "block";
@@ -26,7 +27,7 @@ window.onload = function(){
         IMGcurrent++
         document.images['myimage'].src ='./assets/images/news_' + IMGcurrent + '.png'
         if(IMGcurrent == numIMG){IMGcurrent = 0}
-	setTimeout("switchImage()", 500)
+	setTimeout("switchImage()", 3000)
 }
 $(function() {
 	$('.nav_bar-nav').slick({
