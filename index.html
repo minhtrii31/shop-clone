@@ -27,7 +27,7 @@
 						</li>
 						<li class="header__navbar-item">
 							<span class="header__navbar-title--no-pointer">Kết nối</span>
-							<a href="" class="header__navbar-icon-link">
+							<a href="https://www.facebook.com" class="header__navbar-icon-link" target="_blank">
 								<i class="header__navbar-icon ti-facebook"></i>
 							</a>
 						</li>
@@ -45,11 +45,11 @@
 								<span class="header__navbar-item-link-title">Trợ giúp</span>
 							</a>
 						</li>
-						<li class="header__navbar-item header__navbar-item--strong" onclick="register_form()">Đăng ký</li>
-						<li class="header__navbar-item header__navbar-item--strong" onclick="login_form()">Đăng nhập</li>
-						<!-- <li class="header__navbar-item header__navbar-user">
+						<li class="header__navbar-item header__navbar-item--strong" id="header-register-button" onclick="register_form()">Đăng ký</li>
+						<li class="header__navbar-item header__navbar-item--strong" id="header-login-button" onclick="login_form()">Đăng nhập</li>
+						<li class="header__navbar-item header__navbar-user" id="header-user-has-login">
 							<img src="./assets/images/user_logo.png" alt="user logo" class="header__navbar-user-img">
-							<span class="header__navbar-user-name">minhtri3101200@gmail.com</span>
+							<span id="header__navbar-user-name" class="header__navbar-user-name"></span>
 
 							<ul class="header__navbar-user-menu">
 								<li class="header__navbar-user-item">
@@ -62,10 +62,10 @@
 									<a href="">Đơn mua</a>
 								</li>
 								<li class="header__navbar-user-item header__navbar-user-item-separate">
-									<a href="">Đăng xuất</a>
+									<a href="" onclick="">Đăng xuất</a>
 								</li>
 							</ul>
-						</li> -->
+						</li>
 					</ul>
 				</nav>
 				<!-- Header with search -->
@@ -728,13 +728,13 @@
 
 						<div class="auth-form__form"> 
 							<div class="auth-form__group">
-								<input type="text" class="auth-form__input" placeholder="Nhập địa chỉ email">
+								<input type="text" id="mail-user" class="auth-form__input" placeholder="Nhập địa chỉ email">
 							</div>
 							<div class="auth-form__group">
-								<input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+								<input type="password" id="password-user" class="auth-form__input" placeholder="Nhập mật khẩu">
 							</div>
 							<div class="auth-form__group">
-								<input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+								<input type="password" id="password-confirm" class="auth-form__input" placeholder="Nhập lại mật khẩu">
 							</div>
 						</div>
 						<div class="auth-form__aside">
@@ -744,9 +744,10 @@
 								<a href="" class="auth-form__text-link">Chính sách bảo mật</a>
 							</p>
 						</div>
+						<p id="register-error-messenger"></p>
 						<div class="author-form__controls">
 							<button class="btn btn--normal author-form__controls-back" onclick="back_from_form_register()">TRỞ LẠI</button>
-							<button class="btn btn--primary">ĐĂNG KÝ</button>
+							<button class="btn btn--primary" onclick="register_button()">ĐĂNG KÝ</button>
 						</div>
 					</div>
 					<div class="author-form__socials">
@@ -771,16 +772,17 @@
 
 						<div class="auth-form__form"> 
 							<div class="auth-form__group">
-								<input type="text" class="auth-form__input" placeholder="Email/Số điện thoại">
+								<input type="text" id="mail-login" class="auth-form__input" placeholder="Email">
 							</div>
 							<div class="auth-form__group">
-								<input type="password" class="auth-form__input" placeholder="Mật khẩu">
+								<input type="password" id="password-login" class="auth-form__input" placeholder="Mật khẩu">
 							</div>
 							<div class="auth-form-remember">
 								<input type="checkbox" name="remember" id="remember-me"> 
 								<span class="auth-form-remember-title">Tự động đăng nhập</span>
 							</div>
 						</div>
+						<p id="login-error-messenger"></p>
 						<div class="auth-form__aside">
 							<div class="auth-form__help">
 								<a href="" class="auth-form__help-link auth-form__help-forgot">Quên mật khẩu</a>
@@ -790,7 +792,7 @@
 						</div>
 						<div class="author-form__controls">
 							<button class="btn btn--normal author-form__controls-back" onclick="back_from_form_login()">TRỞ LẠI</button>
-							<button class="btn btn--primary">ĐĂNG NHẬP</button>
+							<button class="btn btn--primary" onclick="login_button()">ĐĂNG NHẬP</button>
 						</div>
 					</div>
 					<div class="author-form__socials">

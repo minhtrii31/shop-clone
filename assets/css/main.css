@@ -27,10 +27,12 @@
         display: block;
 }
 .header__navbar-user-img {
-        width: 22px;
-        height: 22px;
+        width: 18px;
+        height: 18px;
         border-radius: 50%;
         border: 1px solid rbga(0, 0, 0, 0.1);
+        color: var(--white-color);
+        align-items: center;
 }
 .header__navbar-user-menu {
         position: absolute;
@@ -741,6 +743,7 @@
 .tab__container-title {
         display: block;
         text-align: center;
+        color: var(--black-color);
         font-size: 1.3rem;
         line-height: 1;
 }

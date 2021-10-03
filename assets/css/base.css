@@ -144,22 +144,36 @@ html {
 .arrow_next {
         position: absolute;
         top: 50%;
+        display: flex;
+        width: 12px;
+        bottom: 0px;
         font-weight: 700;
         font-size: 1.6rem;
-        padding: 0 10px;
         line-height: 1;
         cursor: pointer;
         z-index: 1;
         -webkit-transform: translate(0, -50%);
         -ms-transform: translate(0, -50%);
         transform: translate(0, -50%);
+        align-items: center;
 }
 .arrow_prev {
-        left: -10px;
+        left: -5px;
 }
 .arrow_next {
-        right: 10px;
+        right: 20px;
 }
 .slick-disabled {
         display: none;
+}
+#header-user-has-login {
+        display: none;
+}
+#register-error-messenger,
+#login-error-messenger {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.8rem;
+        margin: 10px;
+        color: #FF6771;
 }

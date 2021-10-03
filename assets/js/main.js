@@ -140,4 +140,37 @@ $('.upcoming__deal-banner').slick({
 	prevArrow:'.upcoming__deal-control-prev',
 	nextArrow:'.upcoming__deal-control-next',
 });
-		      
+function register_button() {
+	var user_name = document.getElementById("mail-user").value;
+	var password_first = document.getElementById("password-user").value;
+	var password_second = document.getElementById("password-confirm").value;
+	if (user_name == '' || password_first == '' || password_second == '') {
+		document.getElementById("register-error-messenger").innerHTML = "Vui lòng nhập đầy đủ thông tin yêu cầu."
+	}
+	else if (password_first != password_second) {
+		document.getElementById("register-error-messenger").innerHTML = "Nhập mật khẩu sai, vui lòng nhập lại."
+	}
+	else {
+		document.getElementById("header-user-has-login").style.display="block";
+		document.getElementById("header-register-button").style.display="none";
+		document.getElementById("header-login-button").style.display="none";
+		document.getElementById("overlay").style.display = "none";
+		document.getElementById("register").style.display = "none";
+		document.getElementById("header__navbar-user-name").innerHTML = user_name;
+	}
+}
+function login_button() {
+	var username = document.getElementById("mail-login").value;
+	var password = document.getElementById("password-login").value;
+	if (username == '' || password== '' ) {
+		document.getElementById("login-error-messenger").innerHTML = "Vui lòng nhập đầy đủ thông tin yêu cầu."
+	}
+	else {
+		document.getElementById("header-user-has-login").style.display="block";
+		document.getElementById("header-register-button").style.display="none";
+		document.getElementById("header-login-button").style.display="none";
+		document.getElementById("overlay").style.display = "none";
+		document.getElementById("login").style.display = "none";
+		document.getElementById("header__navbar-user-name").innerHTML = username;
+	}
+}
