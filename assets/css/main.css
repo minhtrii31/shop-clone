@@ -494,13 +494,13 @@
 }
 .nav_bar-nav-link {
         text-decoration: none;
-        text-align:center;
-
+        text-align: center;
 }
 .nav_bar-nav-link-item {
         display: inline-block;
         font-size: 1.4rem;
         padding: 15px 0px;
+        max-width: 120px;
         color: var(--black-color);
 }
 .icon {
@@ -563,7 +563,8 @@
 .sale__item-content {
         position: relative;
 }
-.sale__item-control-next {
+.sale__item-control-next,
+.upcoming__deal-control-next {
         position: absolute;
         width: 32px;
         z-index: 1;
@@ -572,11 +573,18 @@
         cursor: pointer;
         opacity: 0.3;
 }
+.upcoming__deal-control-next {
+        top: 40%;
+        right: 0;
+}
 .sale__item-control-next:hover,
-.sale__item-control-prev:hover {
+.sale__item-control-prev:hover,
+.upcoming__deal-control-prev:hover,
+.upcoming__deal-control-next:hover {
         opacity: 1;
 }
-.sale__item-control-prev {
+.sale__item-control-prev,
+.upcoming__deal-control-prev {
         position: absolute;
         left: 0;
         top: 30%;
@@ -585,7 +593,10 @@
         transform: rotate( 180deg);
         cursor: pointer;
         opacity: 0.3;
-        visibility: hidden;
+}
+.upcoming__deal-control-prev {
+        top: 40%;
+        left: -1px;
 }
 .sale__item-header {
         margin-top: 10px;
@@ -695,4 +706,87 @@
         height: 24px;
         bottom: 4px;
         left: 5px;
+}
+.promotion__news {
+        margin: 15px;
+}
+.promotion__news-link {
+        text-decoration: none;
+}
+.promotion__news-img-l {
+        width: 100%;
+}
+.tab__container-item {
+        position: relative;
+        margin-right: 25px;
+        margin-top: 10px;
+        background-color: var(--white-color);
+        border: 1px solid rgba(0,0,0,0.01);
+        vertical-align: middle;
+        border-radius: 5px;
+}
+.tab__container-link {
+        text-decoration: none;
+        width: 100%;
+        padding: 10px 0;
+}
+.tab__container-item-img {
+        margin-top: 15px;
+        max-width: 64px;
+        margin: 5px;
+}
+.tab__container-link:hover .tab__container-item-img {
+        transform: scale(1.1);
+}
+.tab__container-title {
+        display: block;
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 1;
+}
+.promotion__news-link-img-border {
+        border-radius: 10px;
+}
+.upcoming__deal-slider {
+        position: relative;
+        margin-right: 25px;
+        margin-top: 10px;
+        background-color: var(--white-color);
+        border: 1px solid rgba(0,0,0,0.01);
+        border-radius: 5px;
+}
+.upcoming__deal-slider-heading {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+}
+.verify-brand-img {
+        width: 24px;
+        height: 24px;
+}
+.upcoming__deal-main__title {
+        display: flex;
+        align-items: center;
+}
+.upcoming__deal-main__title-text {
+        font-size: 1.8rem;
+        padding: 0 5px;
+}
+.upcoming__deal-see__more-link {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: #77A3D7;
+}
+.upcoming__deal-see__more-link:hover {
+        color: #FF6F30;
+}
+.upcoming__deal-banner-img {
+        width: 100%;
+        height: 100%;
+        max-width: 598px;
+        max-height: 201px;
+        border-radius: 8px;
+        padding: 0 20px;
+        border-radius: 10px;
+        object-fit:cover;
 }

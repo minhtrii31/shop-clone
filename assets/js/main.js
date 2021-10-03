@@ -31,19 +31,12 @@ window.onload = function(){
 }
 $(function() {
 	$('.nav_bar-nav').slick({
-		slidesToShow:11,
-		slidesToScroll:11,
+		slidesToShow:8,
+		slidesToScroll:8,
 		arrows:true,
-		prevArrow:'.nav_bar .arrow_prev',
-		nextArrow:'.nav_bar .arrow_next',
+		prevArrow:'.arrow_prev',
+		nextArrow:'.arrow_next',
 		responsive: [
-			{
-				breakpoint: 1300,
-				settings: {
-				  slidesToShow: 8,
-				  slidesToScroll: 8,
-				}
-			},
 			{
 				breakpoint: 1150,
 				settings: {
@@ -106,5 +99,45 @@ $(function() {
 		arrows:true,
 		prevArrow:'.sale__item-control-prev',
 		nextArrow:'.sale__item-control-next',
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+				  slidesToShow: 4,
+				  slidesToScroll: 4,
+				}
+			},
+			{
+				breakpoint: 800,
+				settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 3,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				}
+			},
+		]
 	}) 
 })
+
+$('.upcoming__deal-banner').slick({
+	infinite: true,
+	slidesToShow: 2,
+	slidesToScroll: 2,
+	dots:true,
+	prevArrow:'.upcoming__deal-control-prev',
+	nextArrow:'.upcoming__deal-control-next',
+});
+		      
