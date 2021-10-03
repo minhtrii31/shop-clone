@@ -82,11 +82,28 @@ $(function() {
 	}) 
 })
 
-function show_prev_arrow() {
-	document.getElementById("prev_hide").style.display = "block";
-	document.getElementById("next_hide").style.display = "none";
+function show_prev_arrow_nav() {
+	document.getElementsByClassName("slick-disabled")[0].style.display = "block";
+	document.getElementsByClassName("slick-enabled")[0].style.display = "none";
 }
-function show_next_arrow() {
-	document.getElementById("prev_hide").style.display = "none";
-	document.getElementById("next_hide").style.display = "block";
+function show_next_arrow_nav() {
+	document.getElementsByClassName("slick-disabled")[0].style.display = "none";
+	document.getElementsByClassName("slick-enabled")[0].style.display = "block";
 }
+function show_prev_arrow_deal() {
+	document.getElementsByClassName("slick-disabled")[1].style.visibility  = "visible";
+	document.getElementsByClassName("slick-enabled")[1].style.visibility  = "hidden";
+}
+function show_next_arrow_deal() {
+	document.getElementsByClassName("slick-disabled")[1].style.visibility = "hidden";
+	document.getElementsByClassName("slick-enabled")[1].style.visibility = "visible";
+}
+$(function() {
+	$('.hot__deal').slick({
+		slidesToShow:6,
+		slidesToScroll:6,
+		arrows:true,
+		prevArrow:'.sale__item-control-prev',
+		nextArrow:'.sale__item-control-next',
+	}) 
+})

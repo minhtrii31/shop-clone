@@ -153,3 +153,6 @@ html {
 .arrow_next {
         right: 0px;
 }
+.slick-disabled {
+        display: none;
+}

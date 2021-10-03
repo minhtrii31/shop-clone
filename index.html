@@ -153,7 +153,7 @@
 				<nav class="nav_bar">
 					<div class="arrow_prev">
 						<span>
-							<i id="prev_hide" class="ti-angle-left" onclick="show_next_arrow()"></i>
+							<i class="ti-angle-left slick-disabled" onclick="show_next_arrow_nav()"></i>
 						</span>
 					</div>
 					<div class="nav_bar-nav">
@@ -214,7 +214,7 @@
 					</div>
 					<div class="arrow_next">
 						<span>
-							<i id="next_hide" class="ti-angle-right" onclick=" show_prev_arrow() "></i>
+							<i class="ti-angle-right slick-enabled" onclick=" show_prev_arrow_nav() "></i>
 						</span>
 					</div>
 				</nav>
@@ -240,8 +240,8 @@
 				</div>
 			</div>
 		</div>
-		<div class="grid">
-			<div class="sale__item">
+		<div class="sale__item">
+			<div class="grid">
 				<div class="sale__item-header">
 					<div class="sale__item-heading">
 						<img src="./assets/images/giasoc.svg" class="sale__item-img">
@@ -254,149 +254,299 @@
 						</span>
 					</div>
 				</div>
-				<div class="hot__deal">
-					<div class="grid__row hot__deal-slider">
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/may_danh_trung.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price sale-price">
-											221.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<span class="sale__item-link-info-discount">
-											-4%
-										</span>
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+				<div class="sale__item-content">
+					<span class="sale__item-more">
+						<img src="./assets/images/arrow_next.png" class="sale__item-control-prev slick-disabled" onclick="show_next_arrow_deal()">
+					</span>
+					<span class="sale__item-more">
+						<img src="./assets/images/arrow_next.png"class="sale__item-control-next slick-enabled" onclick="show_prev_arrow_deal() ">
+					</span>
+					<!-- <div class="arrow-with-border-prev">
+						<i class="ti-angle-left"></i>
+					</div>
+					<div class="arrow-with-border-next">
+						<i class="ti-angle-right"></i>
+					</div> -->
+					<div class="hot__deal">
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/mi_indome.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										163.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-16%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 80%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Đã bán 22
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/tu_lanh.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price sale-price">
-											10.339.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<span class="sale__item-link-info-discount">
-											-13%
-										</span>
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/binh_sieu_toc.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										425.500
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-1%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 50%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/may_chay_bo.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price sale-price">
-											3.581.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<span class="sale__item-link-info-discount">
-											-37%
-										</span>
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/gia_do_dien_thoai.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										145.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-14%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 50%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Đã bán 2
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/can_dien_tu.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price sale-price">
-											185.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<span class="sale__item-link-info-discount">
-											-66%
-										</span>
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/sua_enfomama.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										225.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-1%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 50%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/may_lanh.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price">
-											5.879.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<!-- <span class="sale__item-link-info-discount">
-											
-										</span> -->
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/bep_nuong_dien.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										339.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-21%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 0%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
-						<div class="grid__column-2">
-							<div class="hot__deal-item">
-								<a href="#" class="sale__item-link">
-									<div class="sale__item-link-thumbnail">
-										<img src="./assets/images/tv_coocaa_42.webp" class="sale__item-link-thumbnail-img">
-									</div>
-									<div class="sale__item-link-info">
-										<span class="sale__item-link-info-price sale-price">
-											5.299.000
-											<span class="currency sale-price">đ</span>
-										</span>
-										<span class="sale__item-link-info-discount">
-											-10%
-										</span>
-									</div>
-									<div class="sale__item-link-process">
-										<span class="sale__item-link-process-remain">
-											Đã bán 6
-										</span>
-									</div>
-								</a>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/may_hut_bui_cam_tay.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price">
+										729.000
+										<span class="currency">đ</span>
+									</span>
+									<!-- <span class="sale__item-link-info-discount">
+										
+									</span> -->
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 0%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
 							</div>
-						</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/may_danh_trung.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										221.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-4%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 50%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/tu_lanh.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										10.339.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-13%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 20%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/may_chay_bo.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										3.581.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-37%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 10%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Vừa mở bán
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/can_dien_tu.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										185.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-66%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 90%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Đã bán 9
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/may_lanh.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price">
+										5.879.000
+										<span class="currency">đ</span>
+									</span>
+									<!-- <span class="sale__item-link-info-discount">
+										
+									</span> -->
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 60%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Đã bán 20
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
+						<a href="#" class="hot__deal-item">
+							<div class="sale__item-link">
+								<div class="sale__item-link-thumbnail">
+									<img src="./assets/images/tv_coocaa_42.webp" class="sale__item-link-thumbnail-img">
+								</div>
+								<div class="sale__item-link-info">
+									<span class="sale__item-link-info-price sale-price">
+										5.299.000
+										<span class="currency sale-price">đ</span>
+									</span>
+									<span class="sale__item-link-info-discount">
+										-10%
+									</span>
+								</div>
+								<div class="sale__item-link-qty">
+									<div class="sale__item-link-qty-process" style="width: 40%;"></div>
+									<span class="sale__item-link-qty-remain">
+										Đã bán 10
+									</span>
+									<img src="./assets/images/fire_icon.svg" class="fire-icon">
+								</div>
+							</div>
+						</a>
 					</div>
 				</div>
-		</div>
+			</div>
 		</div>
 		<footer class="footer">
 
