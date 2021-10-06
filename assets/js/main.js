@@ -100,6 +100,15 @@ function show_next_arrow_brand() {
 	document.getElementsByClassName("slick-disabled")[2].style.display = "none";
 	document.getElementsByClassName("slick-enabled")[2].style.display = "block";
 }
+function show_prev_arrow_top() {
+	document.getElementsByClassName("slick-disabled")[3].style.display = "block";
+	document.getElementsByClassName("slick-enabled")[3].style.display = "none";
+}
+function show_next_arrow_top() {
+	document.getElementsByClassName("slick-disabled")[3].style.display = "none";
+	document.getElementsByClassName("slick-enabled")[3].style.display = "block";
+}
+
 $(function() {
 	$('.hot__deal').slick({
 		slidesToShow:6,
@@ -222,7 +231,7 @@ function pad(n) {
 $(function() {
 	$('.brand__card-list-item').slick({
 		slidesToShow:6,
-		slidesToScroll:6,
+		slidesToScroll:3,
 		arrows:true,
 		prevArrow:'.brand-icon-prev',
 		nextArrow:'.brand-icon-next',
@@ -230,26 +239,45 @@ $(function() {
 			{
 				breakpoint: 1100,
 				settings: {
+				  slidesToShow: 5,
+				  slidesToScroll: 4,
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
 				  slidesToShow: 4,
 				  slidesToScroll: 4,
 				}
 			},
 			{
-				breakpoint: 800,
+				breakpoint: 700,
 				settings: {
-				  slidesToShow: 3,
-				  slidesToScroll: 3,
+				  slidesToShow: 2,
+				  slidesToScroll: 2,
 				}
 			},
+		]
+	}) 
+})
+
+$(function() {
+	$('.top__trending-list').slick({
+		slidesToShow:4,
+		slidesToScroll:3,
+		arrows:true,
+		prevArrow:'.top__trending-icon-prev',
+		nextArrow:'.top__trending-icon-next',
+		responsive: [
 			{
-				breakpoint: 600,
+				breakpoint: 950,
 				settings: {
 				  slidesToShow: 2,
 				  slidesToScroll: 2,
 				}
 			},
 			{
-				breakpoint: 400,
+				breakpoint: 650,
 				settings: {
 				  slidesToShow: 1,
 				  slidesToScroll: 1,

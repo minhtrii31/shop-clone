@@ -183,3 +183,6 @@ html {
 .slick-dots li button:before {
         font-size: 1rem;
 }
+.news-m {
+        width: 380px;
+}
