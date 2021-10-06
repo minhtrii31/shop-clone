@@ -576,7 +576,7 @@
         opacity: 0.3;
 }
 .upcoming__deal-control-next {
-        top: 40%;
+        top: 50%;
         right: 0;
 }
 .sale__item-control-next:hover,
@@ -597,7 +597,7 @@
         opacity: 0.3;
 }
 .upcoming__deal-control-prev {
-        top: 40%;
+        top: 50%;
         left: -1px;
 }
 .sale__item-header {
@@ -751,7 +751,6 @@
         border-radius: 10px;
 }
 .upcoming__deal-slider {
-        position: relative;
         margin-right: 25px;
         margin-top: 10px;
         background-color: var(--white-color);
@@ -762,6 +761,9 @@
         display: flex;
         justify-content: space-between;
         padding: 20px;
+}
+.upcoming__deal-item-list {
+        position: relative;
 }
 .verify-brand-img {
         width: 24px;
@@ -792,4 +794,88 @@
         padding: 0 20px;
         border-radius: 10px;
         object-fit:cover;
+}
+.sale__item-count-down {
+	margin: 5px;
+}
+.count_down-link {
+	text-decoration: none;
+	text-align: center;
+}
+.count_down-separate {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+.countdown {
+        display: flex;
+        align-items: center;
+}
+.count_down-time-hours,
+.count_down-time-minutes,
+.count_down-time-seconds {
+	font-size: 1.55rem;
+	font-weight: 500;
+	line-height: 1.6rem;
+	padding: 3px 5px;
+	background-color: rgb(255, 66, 78);
+	border-radius: 5px;
+	color: var(--white-color);
+}
+.count_down-next {
+        font-size: 1.4rem;
+        margin-left: 3px;
+        font-weight: 700;
+        color: var(--black-color);
+}
+.brand-icon-next,
+.brand-icon-prev {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        z-index: 1;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 5px;
+        border-radius: 20px;
+        border: 1px solid rgb(200, 200, 200);
+        color: rgb(200, 200, 200);
+        cursor: pointer;
+        background-color: #fff;
+}
+.brand-icon-prev { 
+        display: none;
+        left: 0;
+}
+.brand-icon-next {
+        right: -1px;
+}
+.brand-icon-prev:hover,
+.brand-icon-next:hover {
+        border: 1px solid var(--black-color);
+        color: var(--black-color);
+}
+.brand__card-wrap {
+        margin-top: 10px;
+        position: relative;
+}
+
+.brand__card-item {
+        text-decoration: none;
+}
+.brand__card-item-img {
+        border: 1px solid rgb(238, 238, 238);
+        border-radius: 8px;
+        width: 190px;
+        height: 284px;
+}
+.brand__card-item-title {
+        position: absolute;
+        color: rgb(26, 148, 255);
+        bottom: 8px;
+        left: 0px;
+        right: 0px;
+        font-size: 1.4rem;
+        text-align: center;
+        margin-left: 5px;
 }

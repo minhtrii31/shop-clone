@@ -6,15 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<!-- Slick -->
+	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick-theme.css">
+	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick.css">
+	<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 	<link rel="stylesheet" href="./assets/css/base.css">
 	<link rel="stylesheet" href="./assets/css/main.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
-	<!-- Slick -->
-	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick-theme.css">
-	<link rel="stylesheet" href="./assets/css/slick-master/slick/slick.css">
 </head>
 <body>
 	<div class="app" style="background-color: #F4F4F4;">
@@ -208,7 +208,7 @@
 					</div>
 					<div class="arrow_next">
 						<span>
-							<i class="ti-angle-right slick-enabled" onclick=" show_prev_arrow_nav() "></i>
+							<i class="ti-angle-right slick-enabled" onclick="show_prev_arrow_nav()"></i>
 						</span>
 					</div>
 				</nav>
@@ -241,11 +241,22 @@
 						<img src="./assets/images/giasoc.svg" class="sale__item-img">
 						<img src="./assets/images/homnay.svg" class="sale__item-img">
 					</div>
+					<!-- Countdown -->
 					<div class="sale__item-count-down">
-						<span>3 : 2 : 1 </span>
-						<span>
-							<i class="ti-angle-right"></i>
-						</span>
+						
+						<a href="#" class="count_down-link">
+							<div id="countdown" lass="count_down-time">
+								<span id="count_down-hours" class="count_down-time-hours"></span>
+								<span class="count_down-separate">:</span>
+								<span id="count_down-minutes" class="count_down-time-minutes"></span>
+								<span class="count_down-separate">:</span>
+								<span id="count_down-seconds" class="count_down-time-seconds"></span>
+								</span>
+								<span class="count_down-next ti-angle-right"></span>
+							</div>
+						</a>
+						
+
 					</div>
 				</div>
 				<div class="sale__item-content">
@@ -656,51 +667,141 @@
 				<div class="upcoming-list">
 					<div class="grid">
 						<div class="upcoming__deal-slider">
-							<div class="upcoming__deal-slider-heading">
-								<div class="upcoming__deal-main__title">
-									<img src="./assets/images/check.png" class="verify-brand-img">
-									<div class="upcoming__deal-main__title-text">Thương Hiệu Chính Hãng</div>
+							<div class="upcoming__deal-item-list">
+								<div class="upcoming__deal-slider-heading">
+									<div class="upcoming__deal-main__title">
+										<img src="./assets/images/check.png" class="verify-brand-img">
+										<div class="upcoming__deal-main__title-text">Thương Hiệu Chính Hãng</div>
+									</div>
+									<div class="upcoming__deal-see__more">
+										<a href="#" class="upcoming__deal-see__more-link">XEM THÊM</a>
+									</div>
 								</div>
-								<div class="upcoming__deal-see__more">
-									<a href="#" class="upcoming__deal-see__more-link">XEM THÊM</a>
+								<span class="upcoming__deal-control">
+									<img src="./assets/images/arrow_next.png" class="upcoming__deal-control-prev">
+								</span>
+								<span class="sale__item-more">
+									<img src="./assets/images/arrow_next.png"class="upcoming__deal-control-next">
+								</span>
+								<div class="upcoming__deal-banner">
+									<div class="upcoming__deal-baner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/sale_mi_pham.webp" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
+									<div class="upcoming__deal-banner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/sale_cham_soc.webp" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
+									<div class="upcoming__deal-banner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/cham_soc_da.webp" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
+									<div class="upcoming__deal-banner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/nha_bep.webp" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
+									<div class="upcoming__deal-banner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/ip_13.webp" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
+									<div class="upcoming__deal-banner-item">
+										<a href="#" class="upcoming__deal-banner-link">
+											<img src="./assets/images/z_flip_3.jpg" alt="" class="upcoming__deal-banner-img">
+										</a>
+									</div>
 								</div>
 							</div>
-							<span class="upcoming__deal-control">
-								<img src="./assets/images/arrow_next.png" class="upcoming__deal-control-prev">
-							</span>
-							<span class="sale__item-more">
-								<img src="./assets/images/arrow_next.png"class="upcoming__deal-control-next">
-							</span>
-							<div class="upcoming__deal-banner">
-								<div class="upcoming__deal-baner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/sale_mi_pham.webp" alt="" class="upcoming__deal-banner-img">
-									</a>
+							<div class="brand__card-wrap">
+								<div class="brand-icon-prev">
+									<span>
+										<i class="ti-angle-left slick-disabled" onclick="show_next_arrow_brand()"></i>
+									</span>
 								</div>
-								<div class="upcoming__deal-banner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/sale_cham_soc.webp" alt="" class="upcoming__deal-banner-img">
-									</a>
+								<div class="brand-icon-next">
+									<span>
+										<i class="ti-angle-right slick-enabled" onclick="show_prev_arrow_brand()"></i>
+									</span>
 								</div>
-								<div class="upcoming__deal-banner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/cham_soc_da.webp" alt="" class="upcoming__deal-banner-img">
+								<div class="brand__card-list-item">
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
 									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									<a href="#" class="brand_card-item">
+										<div style="position: relative;">
+											<img src="/assets/images/pixie.webp" alt="" class="brand__card-item-img">
+											<p class="brand__card-item-title">Giảm Đến 70%</p>
+										</div>
+									</a>
+									
 								</div>
-								<div class="upcoming__deal-banner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/nha_bep.webp" alt="" class="upcoming__deal-banner-img">
-									</a>
-								</div>
-								<div class="upcoming__deal-banner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/ip_13.webp" alt="" class="upcoming__deal-banner-img">
-									</a>
-								</div>
-								<div class="upcoming__deal-banner-item">
-									<a href="#" class="upcoming__deal-banner-link">
-										<img src="./assets/images/z_flip_3.jpg" alt="" class="upcoming__deal-banner-img">
-									</a>
 								</div>
 							</div>
 						</div>

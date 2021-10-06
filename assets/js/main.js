@@ -92,6 +92,14 @@ function show_next_arrow_deal() {
 	document.getElementsByClassName("slick-disabled")[1].style.visibility = "hidden";
 	document.getElementsByClassName("slick-enabled")[1].style.visibility = "visible";
 }
+function show_prev_arrow_brand() {
+	document.getElementsByClassName("slick-disabled")[2].style.display = "block";
+	document.getElementsByClassName("slick-enabled")[2].style.display = "none";
+}
+function show_next_arrow_brand() {
+	document.getElementsByClassName("slick-disabled")[2].style.display = "none";
+	document.getElementsByClassName("slick-enabled")[2].style.display = "block";
+}
 $(function() {
 	$('.hot__deal').slick({
 		slidesToShow:6,
@@ -174,3 +182,79 @@ function login_button() {
 		document.getElementById("header__navbar-user-name").innerHTML = username;
 	}
 }
+
+// Count-down 
+
+var minutes = 30;
+
+var target_date = new Date().getTime() + ((minutes * 60) * 1000);
+var time_limit = ((minutes * 60) * 1000);
+var day, hours, minutes, seconds;
+
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000)
+
+function getCountdown() {
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	if ( seconds_left >= 0) {
+		console.log(time_limit);
+		day = pad( parseInt ( seconds_left / 84000));
+		seconds_left = seconds_left % 84000;
+		
+		hours = pad( parseInt(seconds_left / 3600) );
+		seconds_left = seconds_left % 3600;
+			
+		minutes = pad( parseInt(seconds_left / 60) );
+		seconds = pad( parseInt( seconds_left % 60 ) );
+	}
+	document.getElementById("count_down-hours").innerHTML = hours;
+	document.getElementById("count_down-minutes").innerHTML = minutes;
+	document.getElementById("count_down-seconds").innerHTML = seconds;
+}
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+
+$(function() {
+	$('.brand__card-list-item').slick({
+		slidesToShow:6,
+		slidesToScroll:6,
+		arrows:true,
+		prevArrow:'.brand-icon-prev',
+		nextArrow:'.brand-icon-next',
+		responsive: [
+			{
+				breakpoint: 1100,
+				settings: {
+				  slidesToShow: 4,
+				  slidesToScroll: 4,
+				}
+			},
+			{
+				breakpoint: 800,
+				settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 3,
+				}
+			},
+			{
+				breakpoint: 600,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 2,
+				}
+			},
+			{
+				breakpoint: 400,
+				settings: {
+				  slidesToShow: 1,
+				  slidesToScroll: 1,
+				}
+			},
+		]
+	}) 
+})
