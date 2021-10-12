@@ -73,6 +73,11 @@ html {
         padding-right: 12px;
         width: 8.3333%;
 }
+.grid__column-5 {
+        padding-left: 12px;
+        padding-right: 12px;
+        width: 41.667%;
+}
 /* Animation */
 @keyframes growth{
         from {
@@ -185,4 +190,7 @@ html {
 }
 .news-m {
         width: 380px;
+}
+.footer {
+        margin: 10px;
 }
