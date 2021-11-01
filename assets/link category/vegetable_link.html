@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+	<!-- Slick -->
+	<link rel="stylesheet" href="../css/slick-master/slick/slick-theme.css">
+	<link rel="stylesheet" href="../css/slick-master/slick/slick.css">
+	<link rel="stylesheet" href="../fonts/themify-icons/themify-icons.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app" style="background-color: #F4F4F4;">
+        <header class="header">
+			<div class="grid">
+				<nav class="header__navbar">
+					<ul class="header__navbar-list">
+						<li class="header__navbar-item">
+							<a href="" class="header__navbar-item-link">Đăng nhập trên điện thoại</a>
+						</li>
+						<li class="header__navbar-item">
+							<span class="header__navbar-title--no-pointer">Kết nối</span>
+							<a href="https://www.facebook.com" class="header__navbar-icon-link" target="_blank">
+								<i class="header__navbar-icon ti-facebook"></i>
+							</a>
+						</li>
+					</ul>
+					<ul class="header__navbar-list">
+						<li class="header__navbar-item header__navbar-item-has-notify">
+							<a href="" class="header__navbar-item-link">
+								<i class="ti-bell"></i>
+								<span class="header__navbar-item-link-title">Thông báo</span>
+							</a>
+						</li>
+						<li class="header__navbar-item">
+							<a href="" class="header__navbar-item-link">
+								<i class="ti-help-alt"></i>
+								<span class="header__navbar-item-link-title">Trợ giúp</span>
+							</a>
+						</li>
+						<li class="header__navbar-item header__navbar-item--strong" id="header-register-button" onclick="register_form()">Đăng ký</li>
+						<li class="header__navbar-item header__navbar-item--strong" id="header-login-button" onclick="login_form()">Đăng nhập</li>
+						<li class="header__navbar-item header__navbar-user" id="header-user-has-login">
+							<img src="../images/user_logo.png" alt="user logo" class="header__navbar-user-img">
+							<span id="header__navbar-user-name" class="header__navbar-user-name"></span>
+
+							<ul class="header__navbar-user-menu">
+								<li class="header__navbar-user-item">
+									<a href="">Tài khoản</a>
+								</li>
+								<li class="header__navbar-user-item">
+									<a href="">Địa chỉ</a>
+								</li>
+								<li class="header__navbar-user-item">
+									<a href="">Đơn mua</a>
+								</li>
+								<li class="header__navbar-user-item header__navbar-user-item-separate">
+									<a href="" onclick="">Đăng xuất</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<!-- Header with search -->
+				<div class="header-with-search">
+					<div class="header__logo">
+						<a href="/" class="header__logo-link">
+							<img src="../images/logo.png" alt="logo goodbuy" class="header__logo-img">
+						</a>
+					</div>
+
+					<div class="header__search">
+						<div class="header__search-input-wrap">
+							<input type="text" class="header__search-input" placeholder="Nhập sản phẩm cần tìm">
+							<!-- Search history -->
+							<div class="header__search-history">
+								<h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+								<ul class="header__search-history-list">
+									<li class="header__search-history-item">
+										<a href="">Thực phẩm thiết yếu</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+									<li class="header__search-history-item">
+										<a href="">Rau củ quả</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+									<li class="header__search-history-item">
+										<a href="">Quần áo</a>
+										<a href="" class="exit-icon">
+											<i class="ti-close"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<button class="header__search-btn">
+							<i class="header__search-btn-icon ti-search"></i>
+							<span class="header__search-btn-icon-title">Tìm kiếm</span>
+						</button>
+					</div>
+
+					<!-- Cart -->
+					<div class="header__cart">
+						<div class="header__cart-wrap">
+							<i class="header__cart-icon ti-shopping-cart"></i>
+							<span class="header__cart-notice">1</span>
+							<!-- Has no cart: header__cart-list--no-cart -->
+							<div class="header__cart-list">
+								<img src="../images/nocart.png" alt="no cart" class="header__cart-no-card-img">
+								<span class="header__cart-list-no-cart-msg">Giỏ hàng trống</span>
+								<span>
+									<h4 class="header__cart-heading">Sản phẩm đã thêm vào giỏ</h4>
+									<ul class="header__cart-list-item">
+										<li class="header__cart-item">
+											<img src="../images/razer_blade_14_amd.jpg" class="header__cart-img">
+											<div class="header__cart-item-info">
+												<div class="header__cart-item-head">
+													<h5 class="header__cart-item-name">Razer Blade 14 AMD</h5>
+													<div class="header__cart-item-price-wrap">
+														<span class="header__cart-item-price">51,990,000đ</span>
+														<span class="header__cart-item-multiply">x</span>
+														<span class="header__cart-item-quantity">1</span>
+													</div>
+												</div>
+												<div class="header__cart-item-body">
+													<span class="header__cart-item-description">Phân loại: Laptop</span>
+													<span class="header__cart-item-remove">Xoá</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a href="#">
+								</span>
+							</div>
+						</div>
+					</div>
+			</div>
+		</header>
+		<div class="navigation" style="background-color: white;">
+			<div class="grid">
+				<!-- Navigation -->
+				<nav class="nav_bar">
+					<div class="arrow_prev">
+						<span>
+							<i class="ti-angle-left slick-disabled" onclick="show_next_arrow_nav()"></i>
+						</span>
+					</div>
+					<div class="nav_bar-nav">
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thịt, rau củ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Bách hóa</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thiết bị số</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Điện thoại</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Gia dụng</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thời trang nữ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Thời trang nam</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Nhà cửa</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Điện tử</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Giày nữ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Laptop</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Phụ kiện</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Đồng hồ</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Balo & Vali</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Quốc tế</div>
+						</a>
+						<a class="nav_bar-nav-link" href="">
+							<div class="nav_bar-nav-link-item">Voucher</div>
+						</a>
+					</div>
+					<div class="arrow_next">
+						<span>
+							<i class="ti-angle-right slick-enabled" onclick="show_prev_arrow_nav()"></i>
+						</span>
+					</div>
+				</nav>
+			</div>
+		</div>
+        <div class="main__content">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="category__nav">
+                        <div class="grid__column-3">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../css/slick-master/slick/slick.min.js"></script>
+	<script src="../js/main.js"></script>
+</body>
+</html>
